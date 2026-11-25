@@ -3,6 +3,9 @@
 POLUTO's official project website: a minimal introduction to an evolving
 physical AI work companion. The site presents the motivation and five proposed
 interaction states, with room to grow into a project archive.
+The `paper/` page provides a web reading of the supplied research paper, with
+section navigation, figures, and linked references. It summarizes the paper's
+design and prototype account while identifying planned work and open questions.
 
 ## Local preview
 
@@ -19,6 +22,10 @@ Visit http://127.0.0.1:8000 and stop the server with Ctrl+C.
 
 - `index.html`: English content, page structure, and sharing metadata.
 - `styles.css`: layout, typography, and responsive styles.
+- `paper/index.html` and `paper/paper.css`: research paper reading page and styles.
+- `paper/assets/`: earlier web images of paper figures.
+- `assets/images/fig/`: supplied figure originals and poster PDF, with separate
+  optimized WebP copies used by the paper page.
 - `assets/images/`: approved hero photo and optimized web copies.
 - `AGENTS.md`: development and content-integrity rules.
 

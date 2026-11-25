@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Poluto: An AI Work Companion Robot for Shared Workspaces</title>
+  <meta name="description" content="A visual introduction to Poluto, an AI work companion robot designed for shared workspaces.">
+  <meta name="theme-color" content="#fafaf8">
+  <link rel="canonical" href="https://hello-poluto.github.io/paper/">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Poluto: An AI Work Companion Robot for Shared Workspaces">
+  <meta property="og:description" content="How Poluto makes ongoing AI work perceptible in a shared workspace.">
+  <meta property="og:url" content="https://hello-poluto.github.io/paper/">
+  <meta property="og:image" content="https://hello-poluto.github.io/assets/images/poluto-hero.jpg">
+  <meta property="og:image:alt" content="Poluto on a desk in a shared workspace.">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="paper.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header wrap">
+    <a class="wordmark" href="../index.html" aria-label="POLUTO home">POLUTO</a>
+    <nav aria-label="Main navigation">
+      <a href="index.html" aria-current="page">Paper</a>
+    </nav>
+  </header>
+
+  <main id="main" class="paper-page" tabindex="-1">
+    <article>
+      <header class="paper-hero">
+        <p class="paper-label">POLUTO / Research</p>
+        <h1><span class="paper-title-line"><span class="title-icon" aria-hidden="true">🤖</span><strong class="paper-title-name">Poluto:</strong> <span class="paper-title-description">An AI Work Companion</span></span> <span class="paper-title-line paper-title-description">Robot for Shared Workspaces</span></h1>
+        <p class="paper-authors">Eunah Jeong · Fajr Alkaeid · Kashyap Chitta · J. Taery Kim</p>
+        <div class="paper-video-block">
+          <div class="paper-video">
+            <iframe src="https://www.youtube-nocookie.com/embed/fNn3JKklnuA?si=pJzIgcaM74NM8bS4" title="Poluto demonstration video" loading="lazy" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+          <p><a href="https://youtu.be/fNn3JKklnuA?si=pJzIgcaM74NM8bS4">Watch on YouTube</a></p>
+        </div>
+        <p class="paper-lede">AI agents can keep working while people turn to other tasks. Poluto gives that ongoing work a physical presence, so changes that need attention can be noticed beyond the screen.</p>
+        <figure class="paper-figure paper-figure-opening">
+          <img src="../assets/images/fig/fig1-web.webp" width="1800" height="921" alt="Poluto in a makerspace and an illustrated shared workspace with an owner, collaborator, independent peer, and bystander.">
+          <figcaption>Figure 1. Poluto gives a selected AI project a physical presence while its expressions are also visible to people nearby.</figcaption>
+        </figure>
+      </header>
+
+      <nav class="paper-toc" aria-label="On this page">
+        <span>On this page</span>
+        <a href="#abstract">Abstract</a><a href="#why">Motivation</a><a href="#states">Interaction</a><a href="#principles">Principles</a><a href="#prototype">Prototyping</a><a href="#demonstration">Demonstration</a><a href="#poster">Poster</a><a href="#references">References</a>
+      </nav>
+
+      <section id="abstract" class="paper-section" aria-labelledby="abstract-title">
+        <div class="paper-copy">
+          <h2 id="abstract-title"><span class="title-icon" aria-hidden="true">📝</span>Abstract</h2>
+          <p>When people delegate several tasks to AI agents, they still need to notice when a project needs attention, even while away from the screen. Poluto gives ongoing AI activity a physical presence. Clothing-like visual identities distinguish projects; facial expressions, ear gestures, light, and voice communicate activity states; and rotating arms offer physical controls.</p>
+          <p>In a shared workspace, those cues are also perceptible to collaborators, peers, and bystanders. The paper examines how to balance awareness and interruption, project recognition and information disclosure, and access to controls and permission to use them. It presents an interaction design, two prototyping stages, and a planned interactive demonstration. It does not report a user study.</p>
+        </div>
+      </section>
+
+      <section id="why" class="paper-section" aria-labelledby="why-title">
+        <div class="paper-copy">
+          <h2 id="why-title"><span class="title-icon" aria-hidden="true">🤔</span>Why a physical companion?</h2>
+          <p>Imagine starting an AI task at a computer, then moving to a workbench while the agent continues. The work is still underway, but its status is now out of sight. Returning to the screen just to check for updates can interrupt what the person is doing.</p>
+          <p>Delegating work does not remove the need for human input. An agent may need clarification, encounter an error, or finish while its user is away from the computer. Poluto explores how a tabletop robot can make these moments perceptible in the workspace.</p>
+          <p>Because the workspace is shared, the same expression can be helpful to its user and visible or distracting to others nearby. This shapes both what Poluto communicates and how it does so. The paper's central question follows: how should we design robots whose purpose is to serve particular users, but whose presence is shared?</p>
+        </div>
+      </section>
+
+      <section id="states" class="paper-section" aria-labelledby="states-title">
+        <div class="paper-copy">
+          <h2 id="states-title"><span class="title-icon" aria-hidden="true">📡</span>Making activity visible</h2>
+          <p>Poluto represents an AI agent's activity through five states: <strong>Ready</strong> (waiting for a task), <strong>Working</strong> (executing a task), <strong>Needs You</strong> (requiring input or approval), <strong>Error</strong> (unable to continue), and <strong>Done</strong> (completed). The selected <em>Focal Project</em> appears on the display. A brief ear gesture and voice clip mark a state change, while the expression and ear posture continue to indicate the current state. Other projects remain in the background and can briefly signal attention through proposed LED patterns.</p>
+        </div>
+        <figure class="paper-figure paper-figure-states">
+          <a href="assets/poluto-interaction-design.webp" aria-label="Open the complete Poluto interaction diagram">
+            <img src="../assets/images/fig/fig2_(a)-web.webp" width="1500" height="1223" loading="lazy" alt="Diagram of five project states, showing a different facial expression, LED pattern, voice message, and ear position for each. The selected project is shown on Poluto's display; background projects can signal through LEDs.">
+          </a>
+          <figcaption>Figure 2(a). The five activity states and their proposed expressions. <a href="assets/poluto-interaction-design.webp">View the complete diagram</a>.</figcaption>
+        </figure>
+      </section>
+
+      <section class="paper-section" aria-labelledby="projects-title">
+        <div class="paper-copy">
+          <h2 id="projects-title"><span class="title-icon" aria-hidden="true">🎨</span>Which project? What is happening?</h2>
+          <p>Clothing-like visuals distinguish projects without displaying their names or task details. A separate facial expression shows the agent's activity, so the project's identity can stay recognizable as its state changes. Detailed tasks, approvals, and results remain on the user's computer.</p>
+        </div>
+        <figure class="paper-figure paper-figure-display">
+          <img src="../assets/images/fig/fig2_(b)-web.webp" width="1500" height="594" loading="lazy" alt="Diagram combining a clothing-like project identity with an agent-state expression on Poluto's display.">
+          <figcaption>Figure 2(b). Project identity and agent state form one display.</figcaption>
+        </figure>
+      </section>
+
+      <section class="paper-section" aria-labelledby="controls-title">
+        <div class="paper-copy">
+          <h2 id="controls-title"><span class="title-icon" aria-hidden="true">🎛️</span>Physical controls in a shared space</h2>
+          <p>Poluto's two rotating arms provide physical controls, including selection of the Focal Project. Possible functions also include AI model and reasoning effort selection. Someone nearby may be able to move an arm, but that does not mean they have permission to change the user's settings. The paper proposes locking controls while the user is away and confirming any change made while locked when they return. The confirmation interface remains to be designed and evaluated.</p>
+        </div>
+        <figure class="paper-figure paper-figure-controls">
+          <img src="../assets/images/fig/fig2_(c)-web.webp" width="1500" height="786" loading="lazy" alt="Diagram of Poluto's two rotating arms, with possible customizable functions such as selecting a project or adjusting AI settings.">
+          <figcaption>Figure 2(c). The rotating arms are designed as customizable controls; the diagram shows possible functions.</figcaption>
+        </figure>
+      </section>
+
+      <section id="principles" class="paper-section" aria-labelledby="principles-title">
+        <div class="paper-copy">
+          <h2 id="principles-title"><span class="title-icon" aria-hidden="true">🧭</span>Designing for people nearby</h2>
+          <p>Poluto's presence in a shared workspace brings three design questions together:</p>
+          <ul class="paper-principles">
+            <li><strong>Noticeability and interruption.</strong> How can a brief cue draw attention without repeatedly disturbing others?</li>
+            <li><strong>Recognition and disclosure.</strong> Can users recognize a project while revealing little about it to bystanders?</li>
+            <li><strong>Access and permission.</strong> How can physical controls remain convenient without allowing unwanted changes?</li>
+          </ul>
+          <p>For noticeability, the design separates brief attention cues, such as ear movement and voice, from continuing state cues on the display and ears. For recognition, clothing-like project identities are separate from facial expressions, although observers may still infer a project's general subject. For permission, a person who can touch the robot is not automatically authorized to change settings. Whether these choices work for users and nearby people remains to be evaluated.</p>
+        </div>
+      </section>
+
+      <section id="prototype" class="paper-section" aria-labelledby="prototype-title">
+        <div class="paper-copy">
+          <h2 id="prototype-title"><span class="title-icon" aria-hidden="true">🛠️</span>An evolving prototype</h2>
+          <p>Poluto has developed through two prototypes. V1 combined a modified TJBot body <a href="#ref-6">[6]</a> and flipper components from the Robotic Study Companion <a href="#ref-2">[2]</a>. Its manually created expressions, lighting, and ear movement explored the concept but were not driven by a working AI agent.</p>
+          <p>V2 connects AI agent activity to display expressions, voice clips, and ear movements, and adds working rotating arms. The team removed V1's microphone and local language model to focus speech on communicating agent activity through pre-recorded clips, using Voice Design <a href="#ref-4">[4]</a>. The body was redesigned for its components, character, and tabletop stability. LED behavior remained under development in the paper's account.</p>
+        </div>
+        <figure class="paper-figure paper-figure-prototype">
+          <img src="assets/poluto-prototyping.webp" width="2000" height="780" loading="lazy" alt="Development images showing Poluto's first prototype, electronics and body redesign, and second prototype.">
+          <figcaption>Figure 3. From an initial prototype through electronics and mechanical redesign to the second prototype.</figcaption>
+        </figure>
+      </section>
+
+      <section id="demonstration" class="paper-section" aria-labelledby="demonstration-title">
+        <div class="paper-copy">
+          <h2 id="demonstration-title"><span class="title-icon" aria-hidden="true">🎬</span>Demonstration and open questions</h2>
+          <p>The paper describes a planned demonstration with a makerspace video and hands-on interaction. Visitors would select a project with an arm and experience controlled transitions through all five states. Scenarios ask when expressive feedback helps a user but interrupts someone nearby, and what happens when a bystander changes another person's controls.</p>
+          <p>At submission, the paper reported a completed physical prototype and demonstration video, reliable display, voice playback, and servo-driven ear movement, but intermittent LED output. It does not report findings from visitors.</p>
+          <p>Further study is needed to understand whether people notice and interpret the cues, what project identities reveal to others, and how safeguards can prevent unwanted changes while retaining convenient physical control.</p>
+        </div>
+        <figure class="paper-figure paper-figure-failures">
+          <img src="../assets/images/fig/fig4-web.webp" width="1300" height="1043" loading="lazy" alt="Two illustrated situations: Poluto's expressive feedback distracts a nearby worker, and a bystander turns another person's robot control.">
+          <figcaption>Figure 4. Anticipated interaction failures: unwanted distraction and unauthorized interaction. These are design scenarios, not observed study results.</figcaption>
+        </figure>
+      </section>
+
+      <section id="poster" class="paper-section" aria-labelledby="poster-title">
+        <div class="paper-copy">
+          <h2 id="poster-title"><span class="title-icon" aria-hidden="true">🖼️</span>Research poster</h2>
+          <p>The companion poster brings together the motivation, design principles, interaction design, and prototype development on one page. <a href="../assets/images/fig/poster.pdf" type="application/pdf">Open the poster PDF (52 MB)</a>.</p>
+        </div>
+      </section>
+
+      <section id="references" class="paper-section paper-last" aria-labelledby="references-title">
+        <div class="paper-copy">
+          <h2 id="references-title"><span class="title-icon" aria-hidden="true">📚</span>References</h2>
+          <ol class="reference-list">
+            <li id="ref-1">Ruth Ablett et al. (2007). “BuildBot: Robotic Monitoring of Agile Software Development Teams.” <em>RO-MAN</em>, 931–936. <a href="https://doi.org/10.1109/ROMAN.2007.4415217">DOI</a></li>
+            <li id="ref-2">Farnaz Baksh, Matevž Borjan Zorec, and Karl Kruusamäe (2024). “Open-Source Robotic Study Companion with Multimodal Human–Robot Interaction to Improve the Learning Experience of University Students.” <em>Applied Sciences</em> 14(13), 5644. <a href="https://doi.org/10.3390/app14135644">DOI</a></li>
+            <li id="ref-3">Yi-Hung Chou et al. (2026). “Developers as Managers of AI Agents: A Workplace Shadowing Study.” <a href="https://arxiv.org/abs/2610.33588">arXiv:2610.33588</a></li>
+            <li id="ref-4">ElevenLabs. “Voice Design.” <a href="https://elevenlabs.io/voice-design">Website</a></li>
+            <li id="ref-5">Faria Huq et al. (2025). “CowPilot: A Framework for Autonomous and Human-Agent Collaborative Web Navigation.” <em>NAACL System Demonstrations</em>, 163–172. <a href="https://doi.org/10.18653/v1/2025.naacl-demo.17">DOI</a></li>
+            <li id="ref-6">IBM. “TJBot.” <a href="https://ibmtjbot.github.io/">Website</a></li>
+            <li id="ref-7">Hiroshi Ishii et al. (1998). “ambientROOM: Integrating Ambient Media with Architectural Space.” <em>CHI 98 Conference Summary</em>, 173–174. <a href="https://doi.org/10.1145/286498.286652">DOI</a></li>
+            <li id="ref-8">Min Kyung Lee et al. (2012). “Ripple Effects of an Embedded Social Agent: A Field Study of a Social Robot in the Workplace.” <em>CHI</em>, 695–704. <a href="https://doi.org/10.1145/2207676.2207776">DOI</a></li>
+            <li id="ref-9">Tao Long et al. (2026). “ParallelPilot: Supporting Coordination and Monitoring in Parallel AI Coding.” <a href="https://arxiv.org/abs/2609.33113">arXiv:2609.33113</a></li>
+            <li id="ref-10">Miles McCain et al. (2026). “Measuring AI Agent Autonomy in Practice.” Anthropic technical report. <a href="https://www.anthropic.com/research/measuring-agent-autonomy">Report</a></li>
+          </ol>
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <footer class="site-footer wrap">
+    <a class="wordmark" href="../index.html" aria-label="POLUTO home">POLUTO</a>
+    <p>An evolving project.</p>
+  </footer>
+</body>
+</html>
