@@ -1,8 +1,7 @@
 # POLUTO — A Physical AI Work Companion
 
-POLUTO's official project website: a minimal introduction to an evolving
-physical AI work companion. The site presents the motivation and five proposed
-interaction states, with room to grow into a project archive.
+POLUTO's official project website: a photo-led account of the V1 and V2
+prototypes and the making of a physical AI work companion.
 The `paper/` page provides a web reading of the supplied research paper, with
 section navigation, figures, and linked references. It summarizes the paper's
 design and prototype account while identifying planned work and open questions.
@@ -27,6 +26,8 @@ Visit http://127.0.0.1:8000 and stop the server with Ctrl+C.
 - `assets/images/fig/`: supplied figure originals and poster PDF, with separate
   optimized WebP copies used by the paper page.
 - `assets/images/`: approved hero photo and optimized web copies.
+- `assets/pics/`: supplied V1 and V2 photos. The `web/` subfolder contains
+  optimized copies used on the homepage; the JPEGs remain as supplied.
 - `AGENTS.md`: development and content-integrity rules.
 
 The supplied `Untitled_1.2.6.jpg` is preserved byte-for-byte as
@@ -34,12 +35,9 @@ The supplied `Untitled_1.2.6.jpg` is preserved byte-for-byte as
 pixels wide, with a JPEG fallback. Web copies omit original metadata.
 Do not modify the original when preparing new derivatives.
 
-The five states are proposals, not claims of completed implementation.
-To add an approved state photo, place an image inside that state's `<dd>` with
-descriptive `alt`, intrinsic `width`/`height`, and `loading="lazy"`. No empty
-image slots are rendered. Add a POLUTO in Action section at the marked HTML
-comment only after a real video is supplied; include an accessible title and
-captions as appropriate. There is currently no video player or hidden embed.
+The homepage follows the supplied first-person V1 and V2 story. The paper page
+contains the detailed proposed interaction states. There is currently no video
+player or hidden embed.
 
 ## GitHub Pages
 

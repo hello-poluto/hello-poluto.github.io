@@ -13,95 +13,54 @@
 * { box-sizing: border-box; }
 body { margin: 0; }
 a { color: inherit; text-underline-offset: .25em; }
-a:hover { text-decoration: underline; }
-a:focus-visible { outline: 2px solid currentColor; outline-offset: 6px; }
+a:focus-visible { outline: 2px solid currentColor; outline-offset: 5px; }
 main:focus { outline: none; }
 img { display: block; max-width: 100%; height: auto; }
-figure, p, h1, h2, dl, dd { margin: 0; }
-.wrap { width: min(100% - 96px, 1256px); margin-inline: auto; }
+figure, p, h1, h2 { margin: 0; }
+.wrap { width: min(100% - 48px, 1100px); margin-inline: auto; }
 .skip-link { position: absolute; top: -100px; left: 20px; padding: 14px 20px; background: var(--ink); color: var(--paper); z-index: 2; }
 .skip-link:focus { top: 12px; }
-.site-header { display: flex; align-items: center; justify-content: space-between; gap: 24px; min-height: 96px; border-bottom: 1px solid var(--line); }
-.wordmark { font-size: 1rem; font-weight: 700; letter-spacing: -.04em; text-decoration: none; }
-nav { display: flex; flex-wrap: wrap; gap: 8px 30px; }
+.site-header { display: flex; align-items: center; justify-content: space-between; gap: 24px; min-height: 76px; border-bottom: 1px solid var(--line); }
+.wordmark { font-size: .9rem; font-weight: 700; letter-spacing: -.04em; text-decoration: none; }
 nav a { display: inline-block; padding-block: 12px; font-size: .875rem; text-decoration: none; }
-.hero { padding-top: 54px; }
-.hero-heading { display: flex; align-items: flex-end; justify-content: space-between; gap: 32px; padding-bottom: 30px; }
-h1 { font-size: clamp(5rem, 12.5vw, 10.75rem); font-weight: 700; line-height: .84; letter-spacing: -.075em; margin-left: -.055em; }
-.subtitle { font-size: clamp(1.125rem, 2.1vw, 1.75rem); line-height: 1.18; letter-spacing: -.035em; padding-bottom: 3px; }
+nav a:hover, .paper-link a:hover { text-decoration: underline; }
+.hero { padding-block: 58px 92px; }
+.hero-heading { display: flex; align-items: flex-end; justify-content: space-between; gap: 28px; padding-bottom: 30px; }
+h1 { font-size: clamp(5rem, 13vw, 10.5rem); font-weight: 700; line-height: .85; letter-spacing: -.075em; margin-left: -.055em; }
+.subtitle { font-size: clamp(1rem, 2vw, 1.5rem); line-height: 1.2; letter-spacing: -.035em; padding-bottom: 3px; }
 .hero-photo img { width: 100%; }
-figcaption { font-size: .8125rem; line-height: 1.5; color: var(--muted); padding-top: 12px; }
-.intro { display: grid; grid-template-columns: 1fr 2fr; gap: 40px; padding-block: 54px 88px; }
-.eyebrow { font-size: 1.125rem; font-weight: 500; line-height: 1.5; letter-spacing: -.025em; padding-top: 6px; }
-.intro > p:last-child { max-width: 33em; font-size: clamp(1.25rem, 2.3vw, 1.875rem); line-height: 1.4; letter-spacing: -.025em; }
-.editorial-section { display: grid; grid-template-columns: 1fr 2fr; gap: 40px; border-top: 1px solid var(--line); padding-block: 60px 76px; scroll-margin-top: 24px; }
-h2 { font-size: 1.125rem; font-weight: 500; line-height: 1.5; letter-spacing: -.025em; }
-.section-body { max-width: 660px; }
-.section-body > p { font-size: 1.0625rem; line-height: 1.75; }
-.section-body > p + p { margin-top: 20px; }
-.section-body > .lead { font-size: clamp(1.75rem, 3.2vw, 2.75rem); line-height: 1.15; letter-spacing: -.045em; margin-bottom: 28px; }
-.section-body > .state-note { margin-top: 38px; margin-bottom: 14px; font-size: .875rem; color: var(--muted); }
-.state { display: grid; grid-template-columns: 175px 1fr; gap: 12px 20px; padding-block: 21px; border-top: 1px solid var(--line); }
-.state:last-child { border-bottom: 1px solid var(--line); }
-dt { font-size: 1rem; font-weight: 700; line-height: 1.5; }
-dd { font-size: 1rem; line-height: 1.5; color: var(--muted); }
-.state img { margin-top: 16px; width: 100%; }
-.section-body > .prototype-note { margin-top: 24px; font-size: .875rem; color: var(--muted); line-height: 1.6; }
-.next-section { padding-bottom: 96px; }
-.site-footer { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding-block: 26px 34px; border-top: 1px solid var(--line); }
-.site-footer p { font-size: .875rem; color: var(--muted); }
-
-/* Match the former 75% desktop browser view at normal browser zoom. */
-@media (min-width: 721px) {
-  .wrap { width: min(100% - 72px, 942px); }
-  .site-header { min-height: 72px; gap: 18px; }
-  .wordmark { font-size: .75rem; }
-  nav { gap: 6px 22.5px; }
-  nav a { padding-block: 9px; font-size: .65625rem; }
-  .hero { padding-top: 40.5px; }
-  .hero-heading { gap: 24px; padding-bottom: 22.5px; }
-  h1 { font-size: clamp(3.75rem, 9.375vw, 8.0625rem); }
-  .subtitle { font-size: clamp(.84375rem, 1.575vw, 1.3125rem); padding-bottom: 2.25px; }
-  figcaption { font-size: .609375rem; padding-top: 9px; }
-  .intro { gap: 30px; padding-block: 40.5px 66px; }
-  .eyebrow { font-size: .84375rem; padding-top: 4.5px; }
-  .intro > p:last-child { font-size: clamp(.9375rem, 1.725vw, 1.40625rem); }
-  .editorial-section { gap: 30px; padding-block: 45px 57px; scroll-margin-top: 18px; }
-  h2 { font-size: .84375rem; }
-  .section-body { max-width: 495px; }
-  .section-body > p { font-size: .796875rem; }
-  .section-body > p + p { margin-top: 15px; }
-  .section-body > .lead { font-size: clamp(1.3125rem, 2.4vw, 2.0625rem); margin-bottom: 21px; }
-  .section-body > .state-note { margin-top: 28.5px; margin-bottom: 10.5px; font-size: .65625rem; }
-  .state { grid-template-columns: 131.25px 1fr; gap: 9px 15px; padding-block: 15.75px; }
-  dt, dd { font-size: .75rem; }
-  .state img { margin-top: 12px; }
-  .section-body > .prototype-note { margin-top: 18px; font-size: .65625rem; }
-  .next-section { padding-bottom: 72px; }
-  .site-footer { gap: 15px; padding-block: 19.5px 25.5px; }
-  .site-footer p { font-size: .65625rem; }
-}
+figcaption { font-size: .8rem; line-height: 1.5; color: var(--muted); padding-top: 10px; }
+.story-section { display: grid; grid-template-columns: minmax(160px, 1fr) minmax(0, 2fr); gap: 40px; border-top: 1px solid var(--line); padding-block: 56px 100px; }
+.story-heading { align-self: start; }
+.chapter { display: block; margin-bottom: 14px; font-size: .75rem; color: var(--muted); letter-spacing: .08em; text-transform: uppercase; }
+h2 { font-size: clamp(2rem, 3vw, 3.1rem); line-height: 1.05; letter-spacing: -.05em; }
+.story-copy { max-width: 690px; }
+.story-copy > p { max-width: 36em; font-size: clamp(1rem, 1.35vw, 1.125rem); line-height: 1.7; }
+.story-copy > p + p { margin-top: 22px; }
+.story-photo { margin-block: 38px; }
+.story-photo img { width: 100%; }
+.story-photo + p { margin-top: 0; }
+.photo-small { width: min(70%, 460px); margin-top: 48px; }
+.photo-v2 { width: 100%; margin: 48px 0; }
+.photo-v2 img { aspect-ratio: 15 / 16; object-fit: cover; object-position: center bottom; }
+.paper-link { margin-top: 36px !important; font-weight: 700; }
+.paper-link a { display: inline-block; padding-bottom: 6px; border-bottom: 1px solid currentColor; text-decoration: none; }
+.paper-link span { padding-left: 8px; }
+.site-footer { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding-block: 28px 36px; border-top: 1px solid var(--line); }
+.site-footer p { font-size: .8rem; color: var(--muted); }
 
 @media (max-width: 720px) {
   .wrap { width: calc(100% - 40px); }
-  .site-header { min-height: 76px; gap: 16px; }
-  nav { gap: 16px; }
-  .hero { padding-top: 40px; }
+  .hero { padding-block: 40px 64px; }
   .hero-heading { display: block; padding-bottom: 24px; }
   h1 { font-size: clamp(4.5rem, 18vw, 8rem); }
   .subtitle { margin-top: 22px; font-size: 1.125rem; }
   .subtitle br { display: none; }
-  .intro, .editorial-section { grid-template-columns: 1fr; gap: 24px; }
-  .intro { padding-block: 32px 52px; }
-  .editorial-section { padding-block: 36px 48px; }
-  .section-body > .lead { margin-bottom: 22px; }
-  .state { grid-template-columns: 135px 1fr; gap: 16px; }
-  .next-section { padding-bottom: 60px; }
+  .story-section { grid-template-columns: 1fr; gap: 30px; padding-block: 38px 70px; }
+  .story-photo { margin-block: 32px; }
+  .photo-v2 { margin-block: 36px; }
 }
 
-@media (max-width: 380px) {
-  .site-header { align-items: flex-start; padding-block: 20px; }
-  nav { gap: 10px; }
-  nav a { padding-block: 0; font-size: .875rem; }
-  .state { grid-template-columns: 1fr; gap: 5px; }
+@media (max-width: 480px) {
+  .photo-small { width: 85%; }
 }
