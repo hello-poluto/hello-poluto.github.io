@@ -2,9 +2,8 @@
 
 POLUTO's official project website: a photo-led account of the V1 and V2
 prototypes and the making of a physical AI work companion.
-The `paper/` page provides a web reading of the supplied research paper, with
-section navigation, figures, and linked references. It summarizes the paper's
-design and prototype account while identifying planned work and open questions.
+The `paper/` route currently shows a short holding page while submissions are
+under review. The homepage remains the public introduction to the project.
 
 ## Local preview
 
@@ -21,10 +20,10 @@ Visit http://127.0.0.1:8000 and stop the server with Ctrl+C.
 
 - `index.html`: English content, page structure, and sharing metadata.
 - `styles.css`: layout, typography, and responsive styles.
-- `paper/index.html` and `paper/paper.css`: research paper reading page and styles.
-- `paper/assets/`: earlier web images of paper figures.
+- `paper/index.html`: temporary holding page for the former research reading page.
+- `paper/paper.css` and `paper/assets/`: retained paper-page styles and web images.
 - `assets/images/fig/`: supplied figure originals and poster PDF, with separate
-  optimized WebP copies used by the paper page.
+  optimized WebP copies retained for future use.
 - `assets/images/`: approved hero photo and optimized web copies.
 - `assets/pics/`: supplied V1 and V2 photos. The `web/` subfolder contains
   optimized copies used on the homepage; the JPEGs remain as supplied.
@@ -35,9 +34,9 @@ The supplied `Untitled_1.2.6.jpg` is preserved byte-for-byte as
 pixels wide, with a JPEG fallback. Web copies omit original metadata.
 Do not modify the original when preparing new derivatives.
 
-The homepage follows the supplied first-person V1 and V2 story. The paper page
-contains the detailed proposed interaction states. There is currently no video
-player or hidden embed.
+The homepage follows the supplied first-person V1 and V2 story. The detailed
+research reading page is not currently shown. There is no video player or hidden
+embed on the public pages.
 
 ## GitHub Pages
 
