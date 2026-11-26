@@ -2,9 +2,9 @@
 
 POLUTO's official project website: a photo-led account of the V1 and V2
 prototypes and the making of a physical AI work companion.
-The `paper/` route currently shows a short design report holding page while
+The `paper/` route currently shows a short Design Report holding page while
 submissions are under review. The homepage remains the public introduction to
-the project and links to that holding page.
+the project and links to that holding page and the supplied YouTube demo video.
 
 ## Local preview
 
